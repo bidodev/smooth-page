@@ -1,0 +1,29 @@
+/* 
+//break points
+
+phone: 0 - 480px
+tablet: 480 - 900px
+tablet landscape: 900px - 1200px
+normal style: 1200 - 1800px
+big desktop: 1800px
+
+*/
+
+//MEDIA QUERY MANAGER
+
+/*
+$breakpoint argument choices
+
+-phone
+-tablet
+-tablet-landscape
+-huge-desktop
+
+*/
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
