@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
 //break points
 
@@ -25,6 +26,10 @@ $breakpoint argument choices
   box-sizing: inherit;
 }
 
+:root {
+  --color-grey-light-2: #f4f2f2;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -45,7 +50,8 @@ body {
 }
 
 .home,
-.about {
+.about,
+.services {
   position: absolute;
   width: 100vw;
   height: 70vh;
@@ -56,9 +62,11 @@ body {
 
 .home-content {
   display: flex;
+  width: 100vw;
   height: 100%;
   justify-content: space-around;
   align-items: center;
+  margin-left: auto;
 }
 @media (max-width: 700px) {
   .home-content {
@@ -75,6 +83,18 @@ body {
 }
 @media (max-width: 700px) {
   .about-content {
+    flex-direction: column;
+  }
+}
+
+.services-content {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .services-content {
     flex-direction: column;
   }
 }
@@ -115,27 +135,71 @@ body {
   }
 }
 
+.services-presentation {
+  display: flex;
+  max-width: 45%;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #222222;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 700px) {
+  .services-presentation {
+    max-width: 80vw;
+    text-align: center;
+  }
+}
+
 .abc {
   margin: 0 auto;
   width: auto;
+  height: 90%;
   padding: 4rem;
+}
+
+.abcd {
+  margin: 0 auto;
+  width: auto;
+  height: 90%;
+  padding: 4rem;
+  overflow-y: scroll;
 }
 
 h1 {
   padding: 1rem;
   font-size: 4.5rem;
   color: #525252;
+  position: relative;
+}
+
+h1::before {
+  content: "“";
+  position: absolute;
+  top: -8.3rem;
+  left: -4.5rem;
+  line-height: 1;
+  font-size: 14rem;
+  color: var(--color-grey-light-2);
+  font-family: sans-serif;
+  z-index: 1;
 }
 
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   padding: 1rem;
   color: #333;
   font-size: 1.8rem;
 }
 
 .box-svg {
-  width: 30vw;
+  display: flex;
+  width: 40vw;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 700px) {
   .box-svg {
@@ -158,6 +222,11 @@ p {
 }
 
 .about-img {
+  height: auto;
+  width: 37vw;
+}
+
+.services-img {
   height: auto;
   width: 37vw;
 }
@@ -265,6 +334,46 @@ nav.fill ul li a:hover:after {
     height: 100%;
     background: #333;
   }
+}
+html {
+  scrollbar-face-color: white;
+  scrollbar-base-color: white;
+  scrollbar-3dlight-color: white;
+  scrollbar-highlight-color: white;
+  scrollbar-track-color: #bd4562;
+  scrollbar-arrow-color: #bd4562;
+  scrollbar-shadow-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.3rem;
+}
+
+::-webkit-scrollbar-button {
+  background-color: white;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #bd4562;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #bd4562;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 5rem;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #bd4562;
+}
+
+::-webkit-resizer {
+  background-color: white;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */
