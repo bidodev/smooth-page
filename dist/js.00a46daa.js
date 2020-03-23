@@ -12159,7 +12159,7 @@ var Fade = /*#__PURE__*/function (_Highway$Transition) {
       }, {
         left: "0%"
       }).fromTo(to, 0.5, {
-        height: "2vh"
+        height: "2px"
       }, {
         height: "70vh",
         top: "15%",
@@ -12229,7 +12229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33579" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40173" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

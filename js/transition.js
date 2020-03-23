@@ -8,7 +8,7 @@ class Fade extends Highway.Transition {
       .fromTo(
         to,
         0.5,
-        { height: "2vh" },
+        { height: "2px" },
         {
           height: "70vh",
           top: "15%",

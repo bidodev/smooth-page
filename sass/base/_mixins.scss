@@ -28,7 +28,7 @@ $breakpoint argument choices
   }
 
   @if $breakpoint == phone {
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
       @content;
     }
   }
